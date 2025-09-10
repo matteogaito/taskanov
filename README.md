@@ -50,7 +50,7 @@ It provides a **TUI (text user interface)** powered by `prompt_toolkit`, support
 Clone the repository and create a virtual environment:
 
 ```bash
-git clone https://github.com/<your-user>/taskanov.git
+git clone https://github.com/matteogaito/taskanov.git
 cd taskanov
 python3 -m venv .venv
 source .venv/bin/activate
@@ -77,9 +77,22 @@ q   → quit
 ```
 
 ### 🔹 Google backend
-If you want to use the Google Calendar backend, you must **create your own Google app** and credentials (OAuth client) in the Google Cloud Console. Taskanov does not provide credentials out of the box.
-The application must be a desktop app and you had to validate your user if you continue to keep as testing app.
-Download the credentials and put it in ~/.config/taskanov/google/credentials.json if you use mac or linux
+If you want to use the Google Calendar backend, you must **create your own Google app** and credentials (OAuth client) in the Google Cloud Console.  
+Taskanov does not provide credentials out of the box.  
+
+- The application type must be **Desktop app**.  
+- If you keep it in **Testing mode**, you need to validate your user before usage.  
+- Download the credentials and place them at:  
+  - **macOS/Linux** → `~/.config/taskanov/google/credentials.json`  
+
+Then enable the backend with a config file (stored at `~/.config/taskanov/config.yaml`):  
+
+```yaml
+backend:
+  type: google
+  google:
+    statefile: "google_state.json"
+    calendar: "taskanov"
 
 ## 🔮 Roadmap
 - [ ] Autosuspend when workstation is idle
@@ -87,3 +100,7 @@ Download the credentials and put it in ~/.config/taskanov/google/credentials.jso
 - [ ] Linux (`notify-send`) and Windows (`toast`) notification support
 - [ ] Export activity reports (JSON, CSV)
 - [ ] Integration with more systems (Jira, Trello, etc.)
+
+
+## 🔍 Keywords
+task manager · tasks · tui · cli · productivity · timer · time tracker · notifications · google calendar · nextcloud · python · todo list · time tracking · cross-platform · macos · linux · open-source 
