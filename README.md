@@ -95,6 +95,7 @@ backend:
   google:
     statefile: "google_state.json"
     calendar: "taskanov"
+```
 
 ## 🔮 Roadmap
 - [ ] Autosuspend when workstation is idle
