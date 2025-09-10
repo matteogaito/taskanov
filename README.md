@@ -55,16 +55,18 @@ cd taskanov
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
+```
 
 On macOS, install terminal-notifier for notifications:
 ```bash
 brew install terminal-notifier
+```
 
 ## 📦 Usage
 
 ### 🔹 Taskanov TUI
-```po
-$ taskanov tui
+```bash
+taskanov tui
 ```
 
 ### 🔹 Keyboard shortcuts
